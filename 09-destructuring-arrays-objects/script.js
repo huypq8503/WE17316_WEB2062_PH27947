@@ -138,3 +138,12 @@ const rest = new Map();
 rest.set('name', 'Classico');
 rest.set(1,'Firezen, Italy');
 console.log(rest.set(2,'Lisbon, Portugal'));
+
+const getCode = str => str.slice(0, 3).toUpperCase();
+
+for (const flight of flights.split('+')){
+    const [type, from, to, time] = flight.split(';');
+    const output = `${type.startesWith('_Delayed')} ?
+    `
+}
+//  ${getCode(from)} ${getCode(to)}
