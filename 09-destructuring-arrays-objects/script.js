@@ -133,6 +133,13 @@ const {
 }= game;
 console.log(team1, draw,team2);
 
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
 
 const rest = new Map();
 rest.set('name', 'Classico');
