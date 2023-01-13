@@ -92,3 +92,49 @@ console.log(a4, b4, c4)// 1, 2, () => 3
 const {a5, b5, ...c5} = {a: 1, b: 2, c: () => 3, d: 4}
 console.log(a5, b5, c5)// 1, 2, { c: () => 3, d: 4}
 
+const game = {
+    team1 : 'Bayern Munich',
+    team2 : 'Borrussia Dortmund',
+    players : [
+        [
+            'Neuer',
+            'Pavard',
+            'Alaba',
+            'Davies',
+        ],
+        [
+            'Hakimi',
+            'Hazard',
+            'Sanchor',
+            'Gotze',
+        ]
+    ],
+    score: '2:1',
+    scored : ['Alaba', 'Pavard', 'Hakimi'],
+    date : 'Nov 9th, 2017',
+    adds: {
+        team1: 1.33,
+        x: 3.25,
+        team2: 6.5,
+    }
+}
+
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+const {
+    odds: { team1, x: draw, team2},
+}= game;
+console.log(team1, draw,team2);
+
+
+const rest = new Map();
+rest.set('name', 'Classico');
+rest.set(1,'Firezen, Italy');
+console.log(rest.set(2,'Lisbon, Portugal'));
